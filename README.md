@@ -1,1 +1,2 @@
 # final-project
+The final project will be a slideshow of pictures of a sparring match between two martial artists. It will follow concepts in the Aurora lab a couple weeks ago. It will resize the images that I will use, save them under a new name and in a new folder and sequence them shorter and either fade between each other like the transition in a slideshow or fade in and out between a white screen with a mouse click (likely use pygame a little). I may even add a text display to up the score of the fight as the slides progress.
