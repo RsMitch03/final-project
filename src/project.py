@@ -18,7 +18,8 @@ def reformat_image():
      amount = 20
      for frame in range(amount):
           if frame+1 < 10:
-               
+               Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
+               img.save(f"Fight_scene\\rogue_fight_{frame+1}.png")
           else: 
 
 def music():
