@@ -13,13 +13,19 @@ def reformat_image():
      for frame in range(amount):
           with Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
               img.save(f"Fight_scene\\rogue_fight_{frame+1}.png")
-def music():
 
 def main():
     pygame.init()
+    resolution = 600, 800
+    screen = pygame.display.set_mode(resolution)
+    white = pygame.color(255, 255, 255)
+    screen.fill(white)
     running = True
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
     pygame.quit()
+
+if __name__ == "__main__":
+    main()
