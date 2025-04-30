@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageDraw
 import pygame
 
 def resize_fight():
@@ -14,17 +14,35 @@ def reformat_image():
           with Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
               img.save(f"Fight_scene\\rogue_fight_{frame+1}.png")
 
+# def music():
+
 def main():
+    """with Image.open(pic) as img:
+        draw = ImageDraw.Draw(img)
+        draw.text((0, 0), score)
+        img.show()"""
     pygame.init()
+    scene = 1
+    resize_fight()
+    reformat_image()
     resolution = 600, 800
+    hitCount = 0
+    score = f"Hit Count: {hitCount}"
     screen = pygame.display.set_mode(resolution)
-    white = pygame.color(255, 255, 255)
-    screen.fill(white)
+    screen.fill(pygame.Color(255, 255, 255))
+    pygame.display.flip()
     running = True
     while running:
         for event in pygame.event.get():
+            # if event.type == pygame.KEYDOWN and pygame.click:
+            #   hitCount += 1
+            # if event.type == pygame.KEYDOWN and pygame.K_SPACE:
+            #   fade to white
+            #   scene += 1
+            #   fade to new image
             if event.type == pygame.QUIT:
                 running = False
+    
     pygame.quit()
 
 if __name__ == "__main__":
