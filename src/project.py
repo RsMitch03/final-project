@@ -4,15 +4,15 @@ import pygame
 def resize_fight():
     amount = 20
     for frame in range(amount):
-        with Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
-            size = (int(img.width//2), int(img.height//2))
+        with Image.open(f"OGFight_scene\\rogue_fight_{frame+1}.jpg") as img:
+            size = (int(img.width*10), int(img.height*10))
             new_size = img.resize(size)
-            new_size.save(f"Fight_scene\\rogue_fight_{frame+1}.jpg")
+            new_size.save(f"Resized_scene\\rogue_fight_{frame+1}.jpg")
 def reformat_image():
      amount = 20
      for frame in range(amount):
-          with Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
-              img.save(f"Fight_scene\\rogue_fight_{frame+1}.png")
+          with Image.open(f"Resized_scene\\rogue_fight_{frame+1}.jpg") as img:
+              img.save(f"Final_fight_scene\\rogue_fight_{frame+1}.png")
 
 # def music():
 
