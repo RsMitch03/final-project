@@ -5,7 +5,7 @@ def resize_fight():
     amount = 20
     for frame in range(amount):
         with Image.open(f"Fight_scene\\rogue_fight_{frame+1}.jpg") as img:
-            size = (int(img.width//1.5), int(img.height//1.5))
+            size = (int(img.width//2), int(img.height//2))
             new_size = img.resize(size)
             new_size.save(f"Fight_scene\\rogue_fight_{frame+1}.jpg")
 def reformat_image():
@@ -29,15 +29,17 @@ def main():
     hitCount = 0
     score = f"Hit Count: {hitCount}"
     scene = 1
+    display = pygame.image.load(f"Fight_scene\\rogue_fight_{scene}.png")
     screen = pygame.display.set_mode(resolution)
     screen.fill(pygame.Color(255, 255, 255))
+    screen.blit(display, (0, 0))
     pygame.display.flip()
     running = True
     while running:
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 hitCount += 1
-                with Image.open(f"rogue_fight_{scene}.png") as img:
+                with Image.open(f"Fight_scene\\rogue_fight_{scene}.png") as img:
                     draw = ImageDraw.Draw(img)
                     draw.text((0, 0), score)
                     img.show()
