@@ -25,7 +25,7 @@ def main():
     scene = 1
     resize_fight()
     reformat_image()
-    resolution = 600, 600
+    resolution = 300, 400
     hitCount = 0
     score = f"Hit Count: {hitCount}"
     scene = 1
@@ -42,7 +42,6 @@ def main():
                 with Image.open(f"Final_fight_scene\\rogue_fight_{scene}.png") as img:
                     draw = ImageDraw.Draw(img)
                     draw.text((0, 0), score)
-                    img.show()
             if event.type == pygame.KEYDOWN and pygame.K_SPACE:
                 display = pygame.image.load(f"Final_fight_scene\\rogue_fight_{scene+1}.png")
                 screen.blit(display, (0, 0))
