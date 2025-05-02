@@ -37,12 +37,12 @@ def main():
     running = True
     while running:
         for event in pygame.event.get():
-            #if event.type == pygame.MOUSEBUTTONDOWN:
-             #   hitCount += 1
-              #  with Image.open(f"Fight_scene\\rogue_fight_{scene}.png") as img:
-               #     draw = ImageDraw.Draw(img)
-                #    draw.text((0, 0), score)
-                 #   img.show()
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                hitCount += 1
+                with Image.open(f"Final_fight_scene\\rogue_fight_{scene}.png") as img:
+                    draw = ImageDraw.Draw(img)
+                    draw.text((0, 0), score)
+                    img.show()
             if event.type == pygame.KEYDOWN and pygame.K_SPACE:
                 display = pygame.image.load(f"Final_fight_scene\\rogue_fight_{scene+1}.png")
                 screen.blit(display, (0, 0))
