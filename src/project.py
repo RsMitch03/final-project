@@ -31,10 +31,6 @@ def music():
     
 
 def main():
-    """with Image.open(pic) as img:
-        draw = ImageDraw.Draw(img)
-        draw.text((0, 0), score)
-        img.show()"""
     pygame.init()
     music()
     pygame.freetype.init()

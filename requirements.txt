@@ -1,0 +1,3 @@
+Third parties installed: 
+Pillow, imported Image and ImageDraw
+Pygame, imported pygame
